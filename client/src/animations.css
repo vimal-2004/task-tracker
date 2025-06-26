@@ -1,0 +1,73 @@
+/* Fade-in animation for pages */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.7s ease;
+}
+
+/* Button hover scale */
+.animated-btn {
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+}
+.animated-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 20px rgba(25, 118, 210, 0.15);
+}
+
+/* Card hover lift */
+.animated-card {
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+}
+.animated-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18);
+}
+
+/* Slide-in for alerts */
+@keyframes slideInAlert {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animated-alert {
+  animation: slideInAlert 0.5s cubic-bezier(.4,2,.6,1);
+}
+
+/* Task enter/exit animation */
+.task-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.task-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s, transform 0.4s cubic-bezier(.4,2,.6,1);
+}
+.task-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.task-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+/* Page fade transition */
+.page-fade-enter {
+  opacity: 0;
+}
+.page-fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.page-fade-exit {
+  opacity: 1;
+}
+.page-fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s;
+} 
